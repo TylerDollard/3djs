@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eb25db8-6a35-4b8a-8902-1ec4ea11980c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three-d-project/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three-d-project/counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three-d-project/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three-d-project/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/three-d-project/public/vite.svg" afterDir="false" />
-    </list>
+    <list default="true" id="6eb25db8-6a35-4b8a-8902-1ec4ea11980c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 4
@@ -64,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1730405026340</updated>
-      <workItem from="1730405027707" duration="1987000" />
+      <workItem from="1730405027707" duration="2284000" />
     </task>
     <servers />
   </component>
