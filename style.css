@@ -18,7 +18,6 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-
 a:hover {
   color: #535bf2;
 }
@@ -29,14 +28,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  overflow: hidden; /* Ensures no scrollbars from canvas overflow */
-  background-color: #242424; /* Ensures body color matches your theme */
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #FF6347; /* A contrasting color for your heading */
 }
 
 #app {
@@ -52,11 +48,9 @@ h1 {
   will-change: filter;
   transition: filter 300ms;
 }
-
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
@@ -80,11 +74,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
 button:hover {
   border-color: #646cff;
 }
-
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -95,40 +87,10 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-
   a:hover {
     color: #747bff;
   }
-
   button {
     background-color: #f9f9f9;
   }
-}
-
-/* Additional Styles for the Canvas */
-#bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block; /* Ensures no extra space below the canvas */
-  z-index: -1; /* Ensure the canvas is rendered behind other content */
-}
-
-/* Optional: Style for the app's main content */
-#app {
-  position: relative;
-  z-index: 1; /* Ensures content is on top of the canvas */
-}
-
-/* Style the heading */
-h1 {
-  color: #ff6347; /* Adds a vibrant color to your heading */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
