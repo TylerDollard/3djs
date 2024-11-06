@@ -1,13 +1,13 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; // Import OrbitControls
 
-// Setup
+// Setup the scene
 const scene = new THREE.Scene();
-
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+// Renderer setup
 const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector('#bg'),
+    canvas: document.querySelector('#bg'), // Uses the canvas element in HTML
 });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -17,7 +17,6 @@ camera.position.setX(-3);
 // Geometry and Material for Cube
 const geometry = new THREE.BoxGeometry(10, 10, 10);
 const material = new THREE.MeshStandardMaterial({ color: 0xFF6347 });
-
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
@@ -37,10 +36,9 @@ scene.add(icoMesh);
 icoMesh.position.z = -15;
 icoMesh.position.x = 15;
 
-// Lights
+// Lights setup
 const pointLight = new THREE.PointLight(0x87CEFA); // Light blue color
 pointLight.position.set(0, -10, 10);
-
 const ambientLight = new THREE.AmbientLight(0x87CEFA); // Light blue color
 ambientLight.position.set(25, -15, -400);
 
@@ -55,23 +53,23 @@ scene.add(lightHelper);
 const gridHelper = new THREE.GridHelper(200, 50);
 scene.add(gridHelper);
 
-// Orbit Controls
+// Orbit Controls setup
 const controls = new OrbitControls(camera, renderer.domElement);
 
 // Animation Loop
 function animate() {
     requestAnimationFrame(animate);
 
-    // Slowly rotate the cube
+    // Rotate the cube slowly
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
 
-    // Rotate the icosahedron a bit faster in the opposite direction
+    // Rotate the icosahedron in the opposite direction
     icoMesh.rotation.z += -0.03;
     icoMesh.rotation.y += -0.03;
 
-    // Update OrbitControls
-    controls.update(); // This is necessary for live updates
+    // Update OrbitControls (to enable live updates)
+    controls.update();
 
     // Render the scene and camera
     renderer.render(scene, camera);
@@ -80,29 +78,4 @@ function animate() {
 // Start the animation loop
 animate();
 
-// Additional content
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from '../counter.js'
-
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector('#counter'));
 
